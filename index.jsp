@@ -2,6 +2,8 @@
   Document   : index
   Author     : Petr
 %>
+
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <title>Erasmus homepage</title>
