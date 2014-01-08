@@ -1,7 +1,7 @@
 <%--
   Document   : index
   Author     : Petr
-%>
+--%>
 
 <!DOCTYPE html>
 <html lang="en">
