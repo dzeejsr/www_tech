@@ -3,29 +3,47 @@
   Author     : Petr
 --%>
 
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <title>Erasmus homepage</title>
-        <link href="css/style.css" rel="stylesheet" type="text/css" />
+<html>
+    <head>    	
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" type="text/css"  href="${pageContext.request.contextPath}/style2.css">
+        <title>Student DB</title>
     </head>
-
     <body>
-    <div id="total">
-         <div id="top">
-            <img src="img/header.png" alt="logo"/>
-         </div>
-         <div id="content">
-             <form method="post" action="login.jsp">
-                Username<br>
-                <input type="text" size="40" name="username" placeholder="Enter your username"><br>
-                Password<br>
-                <input type="password" size="40" name="password" placeholder="Enter your password"><br>
-                <br>
-                <input type="submit" value="login"><br>
-            </form> 
+<div id="celek">
+	<div id="menu2">
+	<a href="${pageContext.request.contextPath}/login_page.jsp">login</a>&nbsp;|
+	<a href="${pageContext.request.contextPath}/reg.jsp">register</a>
+	</div>
+ 
+<div id="top">
+     <div id="logo">ERASMUS INFORMATIONS</div>
+     
+</div>  
+     <div id="menu">
+	<ul>
+		<li><a href="index.jsp" title="">Home</a></li>
+		<li><a href="index.jsp" title="">Contacts</a></li>
+		
+	</ul>
+</div>    
+     
+     <div id="container">
+     <div id="sidebar"><h1>Sidebar</h1><br>
+     
+     </div>
+        <div id="content"> 
+        <h1>Loren ipsum</h1> 
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus, elit ut egestas imperdiet, mi est tincidunt turpis, id pharetra risus mi ut ligula. Nulla blandit vel diam ut eleifend. Morbi eu ullamcorper lectus. Cras at metus vel dolor fermentum tempor quis at felis. Vivamus at dapibus augue. Maecenas vitae risus ultricies, sagittis nunc sit amet, semper nulla. Donec a interdum turpis. Ut justo ligula, venenatis sed sem sit amet, lobortis porttitor elit. In tempus, nunc id ornare tincidunt, dui felis lobortis enim, sed facilisis tortor dui et magna. Vivamus sagittis ultricies augue, quis placerat eros lacinia vel. Vestibulum imperdiet lobortis risus, id lacinia enim hendrerit a. Nulla eget ligula pulvinar, scelerisque ipsum non, ultrices dolor. Morbi nec sapien in sapien porttitor pharetra sit amet vel eros. In hac habitasse platea dictumst. Nam interdum sem ante, non euismod tellus auctor eu. Nullam ultricies convallis est at consequat.</p>
+         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In rhoncus, elit ut egestas imperdiet, mi est tincidunt turpis, id pharetra risus mi ut ligula. Nulla blandit vel diam ut eleifend. Morbi eu ullamcorper lectus. Cras at metus vel dolor fermentum tempor quis at felis. Vivamus at dapibus augue. Maecenas vitae risus ultricies, sagittis nunc sit amet, semper nulla. Donec a interdum turpis. Ut justo ligula, venenatis sed sem sit amet, lobortis porttitor elit. In tempus, nunc id ornare tincidunt, dui felis lobortis enim, sed facilisis tortor dui et magna.</p>
+         
+           
         </div>
-    </div>    
+        <div id="footer"></div>
+        </div>
+        
+        </div>
     </body>
-
 </html>
