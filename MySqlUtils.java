@@ -11,7 +11,7 @@ public class MySqlUtils {
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
 						
 			return DriverManager.getConnection(
-					"jdbc:mysql://83.212.125.138/st_database", "root", "admin");
+					"jdbc:mysql://83.212.125.138:3306/st_database", "admin", "admin");
 		
 		} catch (Exception e) {
 			e.printStackTrace();
