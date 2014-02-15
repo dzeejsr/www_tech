@@ -9,7 +9,7 @@
     <head>    	
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <link rel="stylesheet" type="text/css"  href="${pageContext.request.contextPath}/style2.css">
-        <title>Student DB</title>
+        <title>Erasmus page</title>
     </head>
 
 <body>    
@@ -31,4 +31,5 @@
         
 <jsp:include page="footer.jsp"/>
      
+
 
