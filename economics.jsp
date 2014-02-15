@@ -32,4 +32,4 @@ Welcome <%=session.getAttribute("userid")%> !
         <p>This website is intended for students of <strong>Faculty of Economics</strong>.</p>
         <p>Here you can find all important informations, contacts, universities where you can study and forms.Also you can send a request for apply to erasmus! 
  </div>
-<jsp:include page="footer.jsp"/> 
+<jsp:include page="footer.jsp"/>  
