@@ -9,28 +9,14 @@
     </head>
     <body>
 <div id="celek">
-	<div id="menu2">
-	<a href="login_page.jsp">login</a>&nbsp;|
-	<a href=reg.jsp>register</a>
-	</div>
- 
-<div id="top">
-     <div id="logo">ERASMUS INFORMATIONS</div>
-     
-</div>  
-     <div id="menu">
-	<ul>
-		<li><a href="index.jsp" title="">Home</a></li>
-		<li><a href="index.jsp" title="">Contacts</a></li>
-		
-	</ul>
-</div>    
-     
-     <div id="container">
-     <div id="sidebar"><h1>Sidebar</h1><br>
-     
-     </div>
-        <div id="content">  
+
+<jsp:include page="login_line.jsp"/> 
+<jsp:include page="menu.jsp"/> 
+
+<div id="container">
+
+
+<div id="content">  
         <form method="post" action="registration.jsp">
         	<h1>Registration</h1>
                <table border="0" width="300px" cellpadding="3" style="border-color: white">
@@ -61,16 +47,11 @@
                         <td><input type="password" name="pass" value="" title="min 6 characters" pattern="^[A-Za-z0-9_]{6,100}$" required /></td>
                     </tr>
                     <tr>
-                        <th colspan="2"><input type="submit" value="Submit" /></th>
+                        <th colspan="2" align="center"><input type="submit" value="Submit" /></th>
                     </tr>
                    </tbody>
             </table>
             
         </form>
     </div>
-        <div id="footer"></div>
-        </div>
-        
-        </div>
-    </body>
-</html>
+<jsp:include page="footer.jsp"/> 
