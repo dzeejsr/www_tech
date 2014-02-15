@@ -7,29 +7,16 @@
         <title>Student DB</title>
     </head>
     <body>
+    
 <div id="celek">
-	<div id="menu2">
-	<a href="/WEB-INF/login_page.jsp">login</a>&nbsp;|
-	<a href="${pageContext.request.contextPath}/reg.jsp">register</a>
-	</div>
- 
-<div id="top">
-     <div id="logo">ERASMUS INFORMATIONS</div>
-     
-</div>  
-     <div id="menu">
-	<ul>
-		<li><a href="/WEB-INF/index.jsp" title="">Home</a></li>
-		<li><a href="/WEB-INF/index.jsp" title="">Contacts</a></li>
-		
-	</ul>
-</div>    
-     
-     <div id="container">
-     <div id="sidebar"><h1>Sidebar</h1><br>
-     
-     </div>
-        <div id="content">
+
+<jsp:include page="login_line.jsp"/> 
+<jsp:include page="menu.jsp"/> 
+
+<div id="container">
+
+
+<div id="content">
         <h1>Login</h1>        	  
         	 <form method="post" action="login.jsp">
         	         	 	<table border="0" width="300px" cellpadding="2" style="border-color: grey">
@@ -47,9 +34,4 @@
                  </table>     			
     	     </form>
     	</div>
-        <div id="footer"></div>
-        </div>
-        
-        </div>
-    </body>
-</html>
+<jsp:include page="footer.jsp"/> 
