@@ -1,7 +1,6 @@
 <%@ page import ="jsp.*, java.sql.*" %>
 <%  
-	//request.getRequestDispatcher("WEB-INF/registration.jsp").forward(request, response);
-    String password = request.getParameter("pass");
+	String password = request.getParameter("pass");
     String firstName = request.getParameter("firstname");
     String lastName = request.getParameter("lastname");
     String email = request.getParameter("email");
@@ -9,10 +8,14 @@
     boolean isEmailPresent = false;
     int i = 0;
     
-    Connection connection = MySqlUtils.connect();
+    //Connection connection = MySqlUtils.connect();
     
-    Statement stat = connection.createStatement();
+    //Statement stat = //connection.createStatement();
     
+    Class.forName("com.mysql.jdbc.Driver");
+    Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/st_database", "admin", "admin");
+    Statement stat = con.createStatement();
+        
     ResultSet resultTable = stat.executeQuery("select * from students where email = '" + email + "'");
     
     while(resultTable.next()){
@@ -22,7 +25,8 @@
     }
     
     if(!isEmailPresent){
-    	i = stat.executeUpdate("insert into students(first_name, last_name, faculty, email, password, inserted_time) values ('" + firstName + "','" + lastName + "','" + faculty + "','" + email + "','" + password + "', CURDATE())");    	
+    //	i = stat.executeUpdate("insert into students(first_name, last_name, faculty, email, password, inserted_time) values ('" + firstName + "','" + lastName + "','" + faculty + "','" + email + "','" + password + "', CURDATE())");    	
+    i = stat.executeUpdate("insert into students values ('" + firstName + "','" + lastName + "','" + faculty + "','" + email + "','" + password + "');");
     }
     
     
@@ -40,5 +44,6 @@
     	
     }
     //zavru spojeni
-    MySqlUtils.close(connection);
+    //MySqlUtils.close(connection);
+    con.close();
 %>
